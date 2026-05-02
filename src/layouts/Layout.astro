@@ -22,17 +22,82 @@ const {
   <meta property="og:title" content={title} />
   <meta property="og:description" content={description} />
   <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://www.jnmabogados.com.ar/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://www.jnmabogados.com.ar/og-image.jpg" />
   <meta property="og:url" content="https://www.jnmabogados.com.ar" />
   <meta property="og:locale" content="es_AR" />
   
   <!-- Favicon -->
+  <link rel="canonical" href="https://www.jnmabogados.com.ar" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   
   <!-- Preconnect Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap" />
   
   <title>{title}</title>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "LegalService",
+      "name": "JNM Abogados",
+      "url": "https://www.jnmabogados.com.ar",
+      "telephone": "+54-9-11-5134-5587",
+      "image": "https://www.jnmabogados.com.ar/og-image.jpg",
+      "description": "Estudio jurídico especializado en accidentes de tránsito, accidentes de trabajo y derecho sucesorio en Argentina.",
+      "areaServed": "Argentina",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "AR",
+        "addressRegion": "Buenos Aires"
+      },
+      "sameAs": [
+        "https://www.instagram.com/jnmabogados"
+      ],
+      "priceRange": "Sin cargo inicial",
+      "openingHours": "Mo-Fr 09:00-18:00"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿La primera consulta tiene costo?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. La primera consulta es completamente sin cargo."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cobran si no ganan el caso?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No cobramos honorarios si no obtenemos un resultado favorable para vos."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Atienden en todo el país?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí, atendemos casos en toda la República Argentina."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+
 </head>
 <body>
   <slot />
