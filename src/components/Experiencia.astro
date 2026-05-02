@@ -1,0 +1,98 @@
+---
+---
+
+<section class="exp section section--dark" id="experiencia">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-label" style="color: var(--accent);">Trayectoria</span>
+      <h2 class="section-title" style="color: var(--white);">Experiencia que respalda resultados</h2>
+      <p class="section-subtitle" style="color: var(--text-on-dark-muted);">
+        Cada caso es una historia. Nosotros nos encargamos de que tenga el mejor final posible.
+      </p>
+    </div>
+
+    <div class="exp__stats reveal">
+      <div class="exp__stat">
+        <span class="exp__stat-number" data-counter data-target="500" data-prefix="+">0</span>
+        <span class="exp__stat-label">Casos Resueltos</span>
+      </div>
+      <div class="exp__stat-divider"></div>
+      <div class="exp__stat">
+        <span class="exp__stat-number" data-counter data-target="95" data-suffix="%">0</span>
+        <span class="exp__stat-label">Sentencias Favorables</span>
+      </div>
+      <div class="exp__stat-divider"></div>
+      <div class="exp__stat">
+        <span class="exp__stat-number" data-counter data-target="10" data-prefix="+">0</span>
+        <span class="exp__stat-label">Años de Experiencia</span>
+      </div>
+    </div>
+
+    <div class="exp__content">
+      <div class="exp__block reveal reveal-delay-1">
+        <div class="exp__block-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="m9 12 2 2 4-4"/></svg>
+        </div>
+        <h3 class="exp__block-title">Compromiso con el resultado</h3>
+        <p class="exp__block-text">No cobramos si no ganamos. Nuestro compromiso es con vos y con obtener la mejor indemnización posible. Trabajamos a resultado.</p>
+      </div>
+      <div class="exp__block reveal reveal-delay-2">
+        <div class="exp__block-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <h3 class="exp__block-title">Atención personalizada</h3>
+        <p class="exp__block-text">Cada cliente recibe seguimiento directo por parte de los socios del estudio. No sos un número de expediente, sos nuestra prioridad.</p>
+      </div>
+      <div class="exp__block reveal reveal-delay-3">
+        <div class="exp__block-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <h3 class="exp__block-title">Presencia en todo el país</h3>
+        <p class="exp__block-text">Atendemos casos en toda la República Argentina. No importa dónde estés, podemos representarte y defender tus derechos.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+.exp { background: var(--gradient-hero); position: relative; overflow: hidden; }
+.exp::before {
+  content: ''; position: absolute; inset: 0;
+  background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.02) 1px, transparent 0);
+  background-size: 50px 50px;
+}
+.exp__stats {
+  display: flex; align-items: center; justify-content: center; gap: var(--space-3xl);
+  margin-bottom: var(--space-4xl); padding: var(--space-2xl) var(--space-3xl);
+  background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08);
+  border-radius: var(--radius-xl); backdrop-filter: blur(10px);
+}
+.exp__stat { text-align: center; }
+.exp__stat-number {
+  display: block; font-family: var(--font-heading); font-size: var(--text-4xl);
+  font-weight: 800; color: var(--accent);
+  background: var(--gradient-accent); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+}
+.exp__stat-label { display: block; font-size: var(--text-sm); color: var(--text-on-dark-muted); font-weight: 500; margin-top: var(--space-xs); }
+.exp__stat-divider { width: 1px; height: 50px; background: rgba(255,255,255,0.1); }
+.exp__content { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-xl); position: relative; z-index: 1; }
+.exp__block {
+  padding: var(--space-2xl); border-radius: var(--radius-lg);
+  background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.06);
+  transition: all var(--transition-slow);
+}
+.exp__block:hover { background: rgba(255,255,255,0.08); border-color: rgba(46,170,220,0.2); transform: translateY(-4px); }
+.exp__block-icon {
+  width: 48px; height: 48px; border-radius: var(--radius-md);
+  background: rgba(46,170,220,0.12); display: flex; align-items: center; justify-content: center;
+  margin-bottom: var(--space-lg);
+}
+.exp__block-icon svg { width: 24px; height: 24px; color: var(--accent); }
+.exp__block-title { font-size: var(--text-lg); font-weight: 700; color: var(--white); margin-bottom: var(--space-sm); }
+.exp__block-text { font-size: var(--text-sm); color: var(--text-on-dark-muted); line-height: 1.7; }
+@media (max-width: 992px) {
+  .exp__stats { flex-direction: column; gap: var(--space-xl); }
+  .exp__stat-divider { width: 50px; height: 1px; }
+  .exp__content { grid-template-columns: 1fr; max-width: 500px; margin: 0 auto; }
+}
+</style>

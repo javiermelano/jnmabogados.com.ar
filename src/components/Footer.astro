@@ -1,0 +1,80 @@
+---
+---
+
+<footer class="footer" id="footer">
+  <div class="container">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <a href="#" class="footer__logo" aria-label="JNM Abogados">
+          <img src="/logo_cropped.png" alt="JNM Abogados Logo" class="footer__logo-img" />
+        </a>
+        <p class="footer__desc">Estudio jurídico especializado en accidentes de tránsito, accidentes de trabajo y derecho sucesorio. Defendemos tus derechos con compromiso y resultados.</p>
+      </div>
+      <div class="footer__links">
+        <h4 class="footer__links-title">Navegación</h4>
+        <ul class="footer__links-list">
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#areas">Áreas de Práctica</a></li>
+          <li><a href="#experiencia">Experiencia</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </div>
+      <div class="footer__links">
+        <h4 class="footer__links-title">Especialidades</h4>
+        <ul class="footer__links-list">
+          <li><a href="#areas">Accidentes de Tránsito</a></li>
+          <li><a href="#areas">Accidentes de Trabajo</a></li>
+          <li><a href="#areas">Derecho Sucesorio</a></li>
+        </ul>
+      </div>
+      <div class="footer__links">
+        <h4 class="footer__links-title">Seguinos</h4>
+        <ul class="footer__links-list">
+          <li><a href="https://wa.me/5491151345587" target="_blank">+54 9 11 5134 5587</a></li>
+          <li><a href="https://instagram.com/jnmabogados" target="_blank">@jnmabogados</a></li>
+        </ul>
+        <div class="footer__social">
+          <a href="https://instagram.com/jnmabogados" class="footer__social-link" aria-label="Instagram" target="_blank" rel="noopener">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p class="footer__copy">&copy; 2026 JNM Abogados. Todos los derechos reservados.</p>
+      <p class="footer__legal">www.jnmabogados.com.ar</p>
+    </div>
+  </div>
+</footer>
+
+<style>
+/* ... (mismos estilos del footer) ... */
+.footer { background: var(--primary-deeper); color: rgba(255,255,255,0.6); padding: var(--space-4xl) 0 var(--space-xl); }
+.footer__top { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: var(--space-3xl); margin-bottom: var(--space-3xl); }
+.footer__logo { display: inline-flex; color: var(--white); margin-bottom: var(--space-lg); }
+.footer__logo-img { height: 60px; width: auto; object-fit: contain; }
+.footer__desc { font-size: var(--text-sm); line-height: 1.7; max-width: 320px; }
+.footer__links-title { font-size: var(--text-sm); font-weight: 700; color: var(--white); margin-bottom: var(--space-lg); text-transform: uppercase; letter-spacing: 0.08em; }
+.footer__links-list { display: flex; flex-direction: column; gap: var(--space-sm); }
+.footer__links-list li { font-size: var(--text-sm); }
+.footer__links-list a { transition: color var(--transition-fast); }
+.footer__links-list a:hover { color: var(--accent); }
+.footer__social { display: flex; gap: var(--space-md); margin-top: var(--space-lg); }
+.footer__social-link {
+  width: 40px; height: 40px; border-radius: var(--radius-md);
+  background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.08);
+  display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.6);
+  transition: all var(--transition-fast);
+}
+.footer__social-link:hover { background: var(--primary); border-color: var(--primary); color: var(--white); transform: translateY(-2px); }
+.footer__bottom {
+  display: flex; justify-content: space-between; align-items: center;
+  padding-top: var(--space-xl); border-top: 1px solid rgba(255,255,255,0.06);
+}
+.footer__copy, .footer__legal { font-size: var(--text-xs); }
+@media (max-width: 992px) { .footer__top { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 576px) {
+  .footer__top { grid-template-columns: 1fr; }
+  .footer__bottom { flex-direction: column; gap: var(--space-sm); text-align: center; }
+}
+</style>

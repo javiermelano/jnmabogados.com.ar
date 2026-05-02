@@ -1,0 +1,96 @@
+---
+const areas = [
+  {
+    icon: 'car',
+    title: 'Accidentes de Tránsito',
+    description: 'Reclamamos la indemnización que te corresponde frente a aseguradoras y responsables. Nos encargamos de todo el proceso legal.',
+    features: ['Choques y colisiones', 'Atropellos', 'Siniestros viales', 'Reclamos a aseguradoras'],
+  },
+  {
+    icon: 'shield',
+    title: 'Accidentes de Trabajo',
+    description: 'Hacemos valer tus derechos ante ART y empleadores. Luchamos para que recibas la compensación justa.',
+    features: ['Reclamos ante ART', 'Enfermedades profesionales', 'Accidentes in itinere', 'Incapacidad laboral'],
+  },
+  {
+    icon: 'scroll',
+    title: 'Derecho Sucesorio',
+    description: 'Te acompañamos en procesos sucesorios con claridad y eficiencia. Resolvemos la herencia para que puedas avanzar.',
+    features: ['Declaratorias de herederos', 'Partición de bienes', 'Testamentos', 'Mediación familiar'],
+  },
+];
+---
+
+<section class="areas section" id="areas">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-label">Especialidades</span>
+      <h2 class="section-title">Áreas de Práctica</h2>
+      <p class="section-subtitle">Nos especializamos en las áreas del derecho donde más se necesita un abogado que pelee de tu lado.</p>
+    </div>
+    <div class="areas__grid">
+      {areas.map((area, index) => (
+        <article class={`areas__card reveal reveal-delay-${index + 1}`}>
+          <div class="areas__card-icon">
+            {area.icon === 'car' && (
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.5 2.8C1.4 11.3 1 12.1 1 13v3c0 .6.4 1 1 1h2"/><circle cx="7" cy="17" r="2"/><circle cx="17" cy="17" r="2"/></svg>
+            )}
+            {area.icon === 'shield' && (
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+            )}
+            {area.icon === 'scroll' && (
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+            )}
+          </div>
+          <h3 class="areas__card-title">{area.title}</h3>
+          <p class="areas__card-desc">{area.description}</p>
+          <ul class="areas__card-features">
+            {area.features.map(f => (
+              <li class="areas__card-feature">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                {f}
+              </li>
+            ))}
+          </ul>
+          <a href="#contacto" class="areas__card-link">Consultar ahora
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+.areas { background: var(--gradient-subtle); }
+.areas__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-xl); }
+.areas__card {
+  background: var(--white); border-radius: var(--radius-lg); padding: var(--space-2xl);
+  border: 1px solid var(--neutral-200); transition: all var(--transition-slow);
+  position: relative; overflow: hidden;
+}
+.areas__card::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+  background: var(--gradient-accent); transform: scaleX(0); transform-origin: left;
+  transition: transform var(--transition-slow);
+}
+.areas__card:hover { transform: translateY(-6px); box-shadow: var(--shadow-card-hover); border-color: rgba(3,100,151,0.15); }
+.areas__card:hover::before { transform: scaleX(1); }
+.areas__card-icon {
+  width: 56px; height: 56px; border-radius: var(--radius-md);
+  background: linear-gradient(135deg, rgba(3,100,151,0.08), rgba(46,170,220,0.08));
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: var(--space-lg); transition: all var(--transition-base);
+}
+.areas__card:hover .areas__card-icon { background: var(--gradient-accent); transform: scale(1.05); }
+.areas__card-icon svg { width: 26px; height: 26px; color: var(--primary); transition: color var(--transition-base); }
+.areas__card:hover .areas__card-icon svg { color: var(--white); }
+.areas__card-title { font-size: var(--text-xl); font-weight: 700; color: var(--text-primary); margin-bottom: var(--space-md); }
+.areas__card-desc { font-size: var(--text-sm); color: var(--text-secondary); line-height: 1.7; margin-bottom: var(--space-lg); }
+.areas__card-features { display: flex; flex-direction: column; gap: var(--space-sm); margin-bottom: var(--space-xl); }
+.areas__card-feature { display: flex; align-items: center; gap: var(--space-sm); font-size: var(--text-sm); color: var(--text-secondary); }
+.areas__card-feature svg { color: var(--accent); flex-shrink: 0; }
+.areas__card-link { display: inline-flex; align-items: center; gap: var(--space-sm); font-size: var(--text-sm); font-weight: 600; color: var(--primary); transition: all var(--transition-fast); }
+.areas__card-link:hover { gap: var(--space-md); color: var(--primary-light); }
+@media (max-width: 992px) { .areas__grid { grid-template-columns: 1fr; max-width: 500px; margin: 0 auto; } }
+</style>
