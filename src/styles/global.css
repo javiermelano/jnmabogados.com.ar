@@ -406,7 +406,7 @@ ul, ol {
   }
 
   .container {
-    padding: 0 var(--space-lg);
+    padding: 0 var(--space-xl);
   }
 
   .section {
@@ -416,7 +416,7 @@ ul, ol {
 
 @media (max-width: 480px) {
   .container {
-    padding: 0 var(--space-md);
+    padding: 0 var(--space-lg);
   }
   
   .section {
